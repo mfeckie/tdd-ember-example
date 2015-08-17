@@ -12,6 +12,7 @@
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
-    "sinonjs": "~1.14.1"
+    "sinonjs": "~1.14.1",
+    "semantic-ui": "~2.0.8"
   }
 }

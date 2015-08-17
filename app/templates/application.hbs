@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="ui page grid">
+  <div class="eleven wide column">
+    <h2 id="title">Testing Ember</h2>
+    <div class="ui menu">
+      {{#link-to 'index' class='item'}}Home{{/link-to}}
+    </div>
+    {{outlet}}
+  </div>
+</div>
