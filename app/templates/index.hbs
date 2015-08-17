@@ -1,1 +1,7 @@
-{{outlet}}
+<div class="ui list">
+  {{#each model as |color|}}
+    <div class="item">
+      <div class="ui label {{color}}">{{color}}</div>
+    </div>
+  {{/each}}
+</div>

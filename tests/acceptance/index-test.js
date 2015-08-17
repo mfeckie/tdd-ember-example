@@ -20,19 +20,19 @@ test('visiting /index', function(assert) {
   });
 });
 
-// test('shows list of colors', function(assert) {
-//   visit('/');
-//
-//   andThen(function () {
-//     var list = find('.ui.label');
-//     assert.equal(list.length, 3, 'Expected list to have three elements');
-//   });
-// });
+test('shows list of colors', function(assert) {
+  visit('/');
 
-// test('Items have color class', function(assert) {
-//   visit('/');
-//   andThen(function () {
-//     var firstItem = find('.ui.label:first');
-//     assert.ok(firstItem.hasClass('red'));
-//   });
-// });
+  andThen(function () {
+    var list = find('.ui.label');
+    assert.equal(list.length, 3, 'Expected list to have three elements');
+  });
+});
+
+test('Items have color class', function(assert) {
+  visit('/');
+  andThen(function () {
+    var firstItem = find('.ui.label:first');
+    assert.ok(firstItem.hasClass('red'));
+  });
+});
