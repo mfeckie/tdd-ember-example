@@ -19,19 +19,19 @@ test('It calls reddit api', function (assert) {
   assert.ok(ajaxStub.calledOnce);
 });
 
-// test('It calls with the correct arguments', function (assert) {
-//   var service = this.subject();
-//   service.getPugs();
-//   var args = ajaxStub.args[0][0];
-//
-//   assert.equal(args.url, 'http://www.reddit.com/r/pugs.json');
-// });
+test('It calls with the correct arguments', function (assert) {
+  var service = this.subject();
+  service.getPugs();
+  var args = ajaxStub.args[0][0];
 
-// test('It calls with dynamic arguments', function (assert) {
-//   var service = this.subject();
-//
-//   service.getDynamic('muggles');
-//   var args = ajaxStub.args[0][0];
-//
-//   assert.equal(args.url, `http://www.reddit.com/r/${'muggles'}.json`);
-// });
+  assert.equal(args.url, 'http://www.reddit.com/r/pugs.json');
+});
+
+test('It calls with dynamic arguments', function (assert) {
+  var service = this.subject();
+
+  service.getDynamic('muggles');
+  var args = ajaxStub.args[0][0];
+
+  assert.equal(args.url, `http://www.reddit.com/r/${'muggles'}.json`);
+});
