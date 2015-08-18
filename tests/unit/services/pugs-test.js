@@ -7,6 +7,11 @@ var ajaxStub;
 moduleFor('service:pugs', 'Unit | Service | pugs', {
   beforeEach () {
     ajaxStub = sinon.stub(Ember.$, 'get');
+    ajaxStub.returns({
+      then: function(){
+        
+      }
+    });
   },
   afterEach () {
     Ember.$.get.restore();
@@ -24,7 +29,7 @@ test('It calls with the correct arguments', function (assert) {
   service.getPugs();
   var args = ajaxStub.args[0][0];
 
-  assert.equal(args.url, 'http://www.reddit.com/r/pugs.json');
+  assert.equal(args, 'http://www.reddit.com/r/pugs.json');
 });
 
 test('It calls with dynamic arguments', function (assert) {
